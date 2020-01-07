@@ -1,0 +1,25 @@
+{
+  "name": "You've Been Yanged",
+  "version": "1.0",
+  "description": "To Spread the Yang",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background/background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "16": "images/chromext_icon.png",
+    "32": "images/chromext_icon.png",
+    "48": "images/chromext_icon.png",
+    "128": "images/chromext_icon.png"
+  },
+  "content_scripts": [{
+    "js": ["content-scripts/main.js"],
+    "matches": ["http://*/*", "https://*/*"]
+  }]
+}
